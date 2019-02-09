@@ -13,28 +13,21 @@ const Seasons = (props) => {
         return season;
     }
 
+     const seasonConfig = {
+        summer:{
+            text:"Lets hit the beach",
+            icon:"sun"
+        },
+        winter:{
+            text:"Burr, it is chilly!",
+            icon:"snowflake"
+
+        }
+    }
+
     const season=getSeason(props.latitude);
+    const {text,icon}=seasonConfig[season] ;
 
-
-    // console.log("seasons props",props);
-    // console.log("season in Seasons props:", season);
-    // console.log("season props latitude:",props.latitude);
-    // if (season==="summer"){
-    //     return(
-    //         <div>
-    //             <h1>This is Summer</h1>
-    //             <h1>Latitude {props.latitude}</h1>
-    //         </div>
-    //     )
-    // }
-    // return (
-    //     <div>
-    //         <h2>This is Winter</h2>
-    //         <h1>Latitude: {props.latitude}</h1>
-    //     </div>
-    // )
-    const icon = season==='winter'? "snowflake" : "sun";
-    console.log('icon', icon);
 
     return(
         <div>
