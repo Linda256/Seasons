@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Seasons from './components/Seasons';
+import Loading from './components/Loading';
 
 class App extends React.Component{
     constructor(props){
@@ -50,9 +51,7 @@ class App extends React.Component{
 
             </div>
         )
-        else return(
-            <div>Loading.....</div>
-            )
+        else return(<Loading />)
     }
 }
 
