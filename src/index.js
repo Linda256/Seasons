@@ -38,8 +38,7 @@ class App extends React.Component{
         console.log("state.latitude:",this.state.latitude);
     }
 
-
-    render(){
+    renderBody(){
         if(this.state.errorMessage && !this.state.latitude)
         return (
             <h1>Error: {this.state.errorMessage}</h1>
@@ -51,7 +50,17 @@ class App extends React.Component{
 
             </div>
         )
-        else return(<Loading />)
+        else return(<Loading message="Please accept location request"/>)
+    }
+
+
+    render(){
+        return (
+            <div>
+                {this.renderBody()}
+            </div>
+            
+        )
     }
 }
 
