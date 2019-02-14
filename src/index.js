@@ -5,6 +5,7 @@ import Loading from './components/Loading';
 
 class App extends React.Component{
     constructor(props){
+        console.log('props in App',props)
         super(props);
         this.state={
             currentSeason:null,
@@ -27,10 +28,6 @@ class App extends React.Component{
                     }
                 )
     }
-
-
-
-
 
     componentDidMount(){
         this.getLocation();
